@@ -35,6 +35,4 @@ jobs:
       - name: Push the Docker image
         env:
            IMAGE_VERSION: ${{ steps.version.outputs.version}}
-        run: docker push victorweb/docker-graphql:$IMAGE_VERSION |
-          docker tag victorweb/docker-graphql:$IMAGE_VERSION victorweb/docker-graphql:latest |
-          docker push victorweb/docker-graphql:latest
+        run: docker push victorweb/docker-graphql:$IMAGE_VERSION
